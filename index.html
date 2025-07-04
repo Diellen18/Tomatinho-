@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tomatinho 💖</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #c0392b;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      background-color: #ff6f61;
+      color: white;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .mensagem {
+      margin-top: 30px;
+      font-size: 18px;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <h1>🍅 Oi, Tomatinho! 💖</h1>
+  <p>Digite seu nome abaixo pra ver se você lembra 😏</p>
+  <input type="text" id="nomeInput" placeholder="Seu nome aqui...">
+  <button onclick="verificarNome()">Enviar</button>
+
+  <div class="mensagem" id="mensagemDiv"></div>
+
+  <script>
+    function verificarNome() {
+      const nome = document.getElementById('nomeInput').value.trim();
+      const mensagemDiv = document.getElementById('mensagemDiv');
+
+      if (nome.toLowerCase() === 'tomatinho') {
+        mensagemDiv.innerText =
+          "🍅 Ainn! Esse é o melhor nome do planeta: TOMATINHO 💕\n\n" +
+          "Você acaba de ganhar: 1 sorriso, 2 abraços e 1 beijinho\n" +
+          "Quer um spoiler? Meu coração dá 'alert' toda vez que falo com você❤️\n" +
+          "Você é o bug mais fofo do meu sistema(essa eu achei mt boa einkkk) 😍";
+      } else if (nome === "") {
+        mensagemDiv.innerText = "Digita alguma coisa! 😜";
+      } else {
+        mensagemDiv.innerText =
+          `🤨 Hmmm... você escreveu "${nome}", mas esse NÃO é o seu nome!\n\n` +
+          "Seu nome verdadeiro é TOMATINHO, lembra??? 🍅\n" +
+          "Vai lá, tenta de novo com carinho!\n" +
+          "Dica: começa com T, termina com INHO e é o apelido mais linduh 💖";
+      }
+    }
+  </script>
+</body>
+</html>
